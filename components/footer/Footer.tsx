@@ -212,29 +212,27 @@ function Footer({
 
   return (
     <footer
-      class={`w-full flex flex-col pt-10 pb-2 md:pb-10 gap-10 ${
-        ColorClasses(layout)
-      }`}
+      class={`bg-black w-full flex flex-col pt-10 pb-2 md:pb-10 gap-10 $`}
     >
       <div class="lg:container mx-6 lg:mx-auto">
         {(!layout?.variation || layout?.variation == "Variation 1") && (
           <div class="flex flex-col gap-10">
-            <div class="flex flex-col md:flex-row md:justify-between md:flex-wrap lg:flex-nowrap gap-8 lg:gap-12">
+            <div class="text-white flex flex-col md:flex-row md:justify-between md:flex-wrap lg:flex-nowrap gap-8 lg:gap-12">
               {_logo}
               {_sectionLinks}
               {_newsletter}
             </div>
             <Divider />
-            <div class="flex flex-col md:flex-row gap-10 md:gap-14 md:items-end">
+            <div class="text-white flex flex-col md:flex-row gap-10 md:gap-14 md:items-end">
               {_payments}
               {_social}
-              <div class="flex flex-col lg:flex-row gap-10 lg:gap-14 lg:items-end">
+              <div class="text-white flex flex-col lg:flex-row gap-10 lg:gap-14 lg:items-end">
                 {_apps}
                 {_region}
               </div>
             </div>
             <Divider />
-            <div class="flex flex-col-reverse md:flex-row md:justify-between gap-10">
+            <div class="text-white flex flex-col-reverse md:flex-row md:justify-between gap-10">
               <PoweredBy />
               {_links}
             </div>
@@ -243,7 +241,7 @@ function Footer({
         {layout?.variation == "Variation 2" && (
           <div class="flex flex-col gap-10">
             <div class="flex flex-col md:flex-row gap-10">
-              <div class="flex flex-col gap-10 lg:w-1/2">
+              <div class=" text-white flex flex-col gap-10 lg:w-1/2">
                 {_logo}
                 {_social}
                 {_payments}

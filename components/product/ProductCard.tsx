@@ -236,7 +236,7 @@ function ProductCard({ product, preload, itemListName, layout }: Props) {
               {l?.hide?.productName
                 ? ""
                 : (
-                  <h2 class="truncate text-base lg:text-lg text-base-content">
+                  <h2 class="truncate text-xl text-base-content text-white">
                     {name}
                   </h2>
                 )}
@@ -252,28 +252,24 @@ function ProductCard({ product, preload, itemListName, layout }: Props) {
         {l?.hide?.allPrices ? "" : (
           <div class="flex flex-col gap-2">
             <div
-              class={`flex flex-col gap-0 ${
-                l?.basics?.oldPriceSize === "Normal"
-                  ? "lg:flex-row lg:gap-2"
-                  : ""
-              } ${align === "center" ? "justify-center" : "justify-start"}`}
+              class={`flex flex-col gap-0 ${align === "center" ? "justify-center" : "justify-start"}`}
             >
               <div
-                class={`line-through text-base-300 text-xs ${
+                class={`line-through text-gray-300 text-xs ${
                   l?.basics?.oldPriceSize === "Normal" ? "lg:text-xl" : ""
                 }`}
               >
-                {formatPrice(listPrice, offers!.priceCurrency!)}
+                de: {formatPrice(listPrice, offers!.priceCurrency!)}
               </div>
-              <div class="text-accent text-base lg:text-xl">
-                {formatPrice(price, offers!.priceCurrency!)}
+              <div class="text-accent text-red-600 lg:text-xl">
+                por: {formatPrice(price, offers!.priceCurrency!)}
               </div>
             </div>
             {l?.hide?.installments
               ? ""
               : (
-                <div class="text-base-300 text-sm lg:text-base">
-                  ou {installments}
+                <div class="text-white text-sm lg:text-base">
+                  em até {installments}
                 </div>
               )}
           </div>
